@@ -1,19 +1,44 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-	<title>Code poem</title>
-	<link rel="stylesheet" href="css/style.css">
+	<meta charset="utf-8" />
+	<title>custom video player</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-	<center>
-		<br>
-		<h1>
-			Video Poem [Week 1]
-		</h1>
-		<br>	
-		<img src="media/Poem1.png" alt="Poem 1" id="image1">
-		<br>
-		<img src="media/Poem2.png" alt="Poem 2" id="image2">
-	</center>
+<div id="container">
+	<div id="progress-background"></div>
+	<figure id="videoContainer">
+		<video id="video" controls preload="metadata" poster="media/thumbnail.png">
+			<source src="media/BoredVideo.mp4" type="video/mp4">
+		</video>
+		<div id="video-controls" class="controls" data-state="hidden">
+			<button id="playpause" type="button" data-state="play">Play/Pause</button>
+			<button id="stop" type="button" data-state="stop">Stop</button>
+			<div class="progress">
+				<progress id="progress" value="0" min="0">
+				</progress>
+			</div>
+			<button id="mute" type="button" data-state="mute">Mute/Unmute</button>
+			<button id="volinc" type="button" data-state="volup">Vol+</button>
+			<button id="voldec" type="button" data-state="voldown">Vol-</button>
+		</div>
+	</figure>
+	<div id="draggable" class="ui-widget-content">
+	  	<img src="media/tired.png" class="title_img">
+	</div>
+	<div id="draggable1" class="ui-widget-content">
+	  	<img src="media/title.png" class="title_img1">
+	</div>
+</div>
+	<script src="js/vid-player.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+		$( function() {
+		$( "#draggable" ).draggable();
+		} );
+	</script>
 </body>
 </html>
