@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+	<div id="poem">
+		<p>
+			Either the Darkness alters - <br>
+			Or something in the sight<br>
+			Adjusts itself to Midnight<br>
+			And <span id="life">Life</span> steps almost straight. 
+		</p>
+	</div>
+
+	<button onclick="myFunction()">
+			shuffle!
+	</button>
+
+	<script>
+
+//this function will be executed whenever the shuffle button is clicked because of 'onclick' DOM inside the button tag. 
+	function myFunction(){
+  //this Math.random will generate random number between 0 and 1
+  		var randomNumber = Math.random();
+  		var chosenWord = "";
+		var bgColor = "";
+
+  //using if statement, check if the randomNumber is larger than 0.5 or not.
+		if (randomNumber > 0.5){
+    // if randomNumber is larger than 0.5 assign "Life" to chosenWord and "pink" to bg color
+			chosenWord = "Life";
+			bgColor = "pink";
+  		}else{
+    // if randomNumber is not larger than 0.5 assign "Death" to chosenWord and "darkgray" to bg color
+    		chosenWord = "Death";
+    		bgColor = "darkgray";
+  		}
+
+  //get the elements from html page which are needed to be changed
+  		var life = document.getElementById("life");
+  		var poem = document.getElementById("poem");
+
+  //assign the variables to each element so that we can see the changes from webpage.
+  	life.innerHTML = chosenWord;
+ 	poem.style.backgroundColor = bgColor;
+
+  //to check newly assigned randomNumber from the console, let's add this line.
+  	console.log(randomNumber);
+	}
+	</script>
+</body>	
+</html>

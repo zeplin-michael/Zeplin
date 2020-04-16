@@ -1,0 +1,128 @@
+#package{
+	width: 650px;
+	height: 450px;
+	/* horizontal + vertical center align - parent div */
+	background: repeating-linear-gradient(
+		to right,
+		#AD7C4A,
+		#AD7C4A 80px,
+		#D5CBBC 90px,
+		#D5CBBC 180px
+	);
+	position: relative;
+	border-radius: 0px 0px 80px 80px;
+	/*//////*/
+}
+
+#name1{
+	/* horizontal + vertical center align - child div */
+	margin: 0;
+	position: absolute;
+	top: 43%;
+	left: 35%;
+	transform: translate(-50%, -50%);
+	/*//////*/
+	font-size: 150px;
+	color: #599DD9;
+	font-family: 'Sonsie One', cursive;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: white;
+	letter-spacing: -3px;
+}
+
+#name2{
+	position: absolute;
+	top: 27%;
+	left: 47%;
+	font-family: 'Sonsie One', cursive;
+	letter-spacing: 1px;
+	font-size: 65px;
+	color: #599DD9;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: white;
+}
+
+#name3{
+	position: absolute;
+	top: 39%;
+	left: 46%;
+	font-family: 'Sonsie One', cursive;
+	letter-spacing: 1px;
+	font-size: 65px;
+	color: #599DD9;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: white;
+}
+
+#subtitle{
+	position: absolute;
+	top: 60%;
+	left: 52%;
+	transform: translate(-50%, 0%);
+	font-family: 'Gochi Hand', cursive;
+	letter-spacing: 4px;
+	font-size: 28px;
+	color: white;
+	background-color: #8C3D2B;
+	padding:40px;
+	border-radius: 0px 0px 50px 50px;
+}
+
+#premium{
+	position: absolute;
+	top: 2%;
+	left: 1%;
+	font-family: 'Oswald', sans-serif;
+	font-weight: bold;
+	font-size: 30px;
+	text-align: center;
+	background-color: #B99441;
+	border-radius: 50px 50px 50px 50px;
+	padding: 40px;
+	color: #643D27;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #8D7C72;
+}
+
+#fun{
+	position: absolute;
+	top: 5%;
+	left: 6.5%;
+	font-family: 'Oswald', sans-serif;
+	font-weight: bold;
+	font-size: 13px;
+	color: #643D27;
+	text-align: center;
+	letter-spacing: 6px;
+}
+
+#iowa{
+	position: absolute;
+	top: 22%;
+	left: 5%;
+	font-family: 'Oswald', sans-serif;
+	font-weight: bold;
+	font-size: 13px;
+	color: #643D27;
+	text-align: center;
+	letter-spacing: 6px;
+}
+
+#snack{
+	width: 650px;
+	position: relative;
+	top: 2%;
+	left: 15%;
+}
+
+#snack_img{
+	width: 75%;
+}
+
+#original_img_container{
+	width: 650px;
+}
+
+#original_img{
+	width: 100%;
+}

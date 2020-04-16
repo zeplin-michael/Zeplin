@@ -1,0 +1,153 @@
+.left_container{
+	position:fixed;
+	top:3%;
+	left:4%;
+	width: 270px;
+	height: 100%;
+	text-align: left;
+}
+.right_container{
+	position:fixed;
+	top:3%;
+	right:4%;
+	width:270px;
+	height: 100%;
+	text-align: right;
+}
+.left_img{
+	width: 100%;
+	height: 100%;
+}
+.right_img{
+	width: 100%;
+	height: 100%;
+}
+.hidden1{
+	display: none;
+	width: 380px;
+	height: 30%;
+	position: fixed;
+	top: 40%;
+	right: 24%;
+	font-family: 'Bad Script', cursive;
+	color: white;
+	background-color: black;
+	padding:1px;
+	border-radius: 80px 80px 0px 80px;
+  	margin: 0px auto;
+  	z-index: 10;
+}
+.hidden2{
+	display: none;
+	width: 10%;
+	height: 30%;
+	position: fixed;
+	top:3%;
+	left: 40%;
+}
+
+.hidden3{
+	display: none;
+	width: 10%;
+	height: 30%;
+	position: fixed;
+	top: 35%;
+	left: 25%;
+}
+
+.hidden4{
+	display: none;
+	width: 10%;
+	height: 30%;
+	position: fixed;
+	bottom: 1%;
+	left: 60%;
+}
+
+.hidden5{
+	display: none;
+	width: 40%;
+	height: 30%;
+	position: fixed;
+	top: 3%;
+	left: 52%;
+}
+
+.hidden6{
+	display: none;
+	width: 350px;
+	height: 30%;
+	position: fixed;
+	top: 70%;
+	right: 50%;
+	font-family: 'Bad Script', cursive;
+	color: black;
+	background: repeating-linear-gradient(
+		to right,
+		#AD7C4A,
+		#AD7C4A 80px,
+		#D5CBBC 90px,
+		#D5CBBC 180px
+	);
+	padding:0px;
+	border-radius: 0px 0px 70px 70px;
+  	margin: 0px auto;
+  	z-index: 10;
+}
+
+.rosie_img{
+	height: 100%;
+}
+
+.nicki_img{
+	height: 100%;
+}
+
+.obama_img{
+	height: 100%;
+}
+
+.diana_img{
+	height: 150%;
+}
+
+
+@media only screen and (min-width: 900px) {
+  .hidden1 {
+    display: inherit;
+  }
+}
+@media only screen and (min-width: 775px) {
+  .hidden2 {
+    display: inherit;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .hidden3 {
+    display: inherit;
+  }
+}
+@media only screen and (min-width: 775px) {
+  .hidden4 {
+    display: inherit;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .hidden5 {
+    display: inherit;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .hidden6 {
+    display: inherit;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+	.left_container{
+		width:46%;
+	}
+	.right_container{
+		width:46%;
+	}
+}

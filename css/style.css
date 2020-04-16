@@ -1,7 +1,40 @@
-body{
-	color: black;
+.title{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Krona One', sans-serif;
+	font-size: 80px;
+	transition: -webkit-text-stroke-color 2s, color 2s;
 }
-
-#image1{
-	color: blue;
+.title:hover{
+	color:transparent;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+}
+.menu{
+	margin:24px;
+}
+.menu_list{
+	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	font-family: 'Bad Script', cursive;
+  	font-size: 80px;
+}
+.work_list{
+	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	font-family: 'Bad Script', cursive;
+  	font-size: 28px;
+}
+#menu_home:hover{
+	color:skyblue;
+}
+#menu_about:hover{
+	color:skyblue;
+}
+#menu_works:hover{
+	color:skyblue;
 }
