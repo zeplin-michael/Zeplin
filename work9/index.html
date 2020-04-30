@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			margin:0px;
+		}
+		#space1 {
+			position: relative;
+		  	background-color: blue;
+		}
+		#space2 {
+			position: relative;
+		  	background-color: pink;
+		}
+		#space3 {
+			position: relative;
+		  	background-color: orange;
+		}
+		@keyframes updown {
+		  0% {
+		    top: 50%;
+		  }
+
+		  50% {
+		    top: 52%;
+		  }
+
+		  100% {
+		    top: 50%;
+		  }
+		}
+		#svg_container1{
+			cursor: pointer;
+			margin: 0;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			animation: updown 1s ease infinite;
+		}
+
+		#svg_container2{
+			cursor: pointer;
+			margin: 0;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			padding:5px;
+		}
+		#svg_container3{
+			cursor: pointer;
+			margin: 0;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			animation: updown 1s ease infinite;
+		}
+		#pump {
+		    fill: none;
+		    stroke: #7d2d68;
+		    stroke-width: 1px;
+		    stroke-dasharray: 1853px;
+		    stroke-dashoffset: 1853px;
+		}
+		.svg_drawing_animation{
+			
+			animation: move 3s linear forwards;  
+		    animation-delay: .2s;
+		}
+
+		@keyframes move {
+		    100% {
+		        stroke-dashoffset: 0;
+		    }
+		}
+
+	</style>
+</head>
+<body>
+	<div id="space1">
+		<div id="svg_container1" onClick="pageScrollDown()">
+			<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="285.32" height="548.7" viewBox="0 0 285.32 548.7">
+				<path d="M0,292.28C57.13,357.8,111.06,463.51,142.68,548.7c31.58-85.19,85.51-190.9,142.64-256.42L172.68,333V0h-60V333Z"/>
+			</svg>
+		</div>
+	</div>
+	<div id="space2">
+		<div id="svg_container2" onClick="pageScrollDown2()">
+			<svg id="svg" xmlns="http://www.w3.org/2000/svg" width="1173.08" height="573.08" viewBox="0 0 1173.08 573.08">
+				<g id="Layer_1" data-name="Layer 1"><circle id="c1" cx="291.17" cy="280.46" r="267.79" stroke="#000" stroke-miterlimit="10"/><circle id="c2" cx="157.04" cy="192.48" r="37.5" fill="#fff" stroke="#000" stroke-miterlimit="10"/><circle id="c3" cx="403.19" cy="192.48" r="37.5" fill="#fff" stroke="#000" stroke-miterlimit="10"/><ellipse id="c3" cx="296.46" cy="413.63" rx="157.69" ry="29.81" fill="#fff" stroke="#000" stroke-miterlimit="10"/><ellipse id="c4" cx="238.77" cy="454.5" rx="28.85" ry="56.25" fill="#fff" stroke="#fff" stroke-miterlimit="10"/></g><g id="Layer_2" data-name="Layer 2"><circle id="c5" cx="860.9" cy="280.46" r="267.79" stroke="#000" stroke-miterlimit="10"/><circle id="c6" cx="726.77" cy="192.48" r="37.5" fill="#fff" stroke="#000" stroke-miterlimit="10"/><circle id="c7" cx="972.92" cy="192.48" r="37.5" fill="#fff" stroke="#000" stroke-miterlimit="10"/><ellipse id="c8" cx="866.19" cy="413.63" rx="157.69" ry="29.81" fill="#fff" stroke="#000" stroke-miterlimit="10"/><ellipse id="c9" cx="808.5" cy="454.5" rx="28.85" ry="56.25" fill="#fff" stroke="#fff" stroke-miterlimit="10"/></g>
+			</svg>
+		 </div>
+	</div>
+	<div id="space3">
+		<div id="svg_container3" onClick="pageScrollUp()">
+			<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="285.32" height="548.7" viewBox="0 0 285.32 548.7">
+				<path d="M285.32,256.42C228.19,190.9,174.26,85.19,142.65,0,111.06,85.19,57.13,190.9,0,256.42l112.65-40.75v333h60v-333Z"/>
+			</svg>
+		 </div>
+	</div>
+
+	<script type="text/javascript">
+		/* code for set full window height for each div#space1, space2, space3 */
+		/* to get window's height, use 'window.innerHeight' */
+		var space1 = document.getElementById("space1");
+		space1.style.height = window.innerHeight + "px";
+		var space2 = document.getElementById("space2");
+		space2.style.height = window.innerHeight + "px";
+		var space3 = document.getElementById("space3");
+		space3.style.height = window.innerHeight + "px";
+
+		/* implement automatic scroll */
+		/* these functions below are called when each div#space1, div#space2, div#space3 is clicked */
+		/* To move scroll down to specific point, use 'window.scrollBy([x],[y])' */
+		function pageScrollDown() {
+		    window.scrollBy(0,window.innerHeight);
+		}
+		function pageScrollDown2() {
+		    window.scrollBy(0,window.innerHeight*2);
+		}
+		/* To move scroll up to the top, use 'document.documentElement.scrollTop = 0' */
+		/* 'window.scrollBy' only works when the scroll is incremented(when scrolling down) */
+		function pageScrollUp() {
+		    document.documentElement.scrollTop = 0;
+		}
+
+		/* when we want to trigger something by user's activity, we use 'document.addEventLister' */
+		/* to get more info about the triggers other than 'scroll', plz visit here */
+		/* this code below will let browser draw pump svg logo when an user scrolls down and gets to the part where the svg is located. */
+		/* detailed explanation is on the class doc */
+		document.addEventListener('scroll', function (e) {
+			var pumpSvgContainer = document.getElementById("svg_container2");
+			var scrolledTop  = window.pageYOffset + window.innerHeight;
+			var pumpSvgContainerOffset = window.innerHeight + pumpSvgContainer.offsetTop;
+			var isPumpVisible = scrolledTop > pumpSvgContainerOffset;
+			if (isPumpVisible) {
+				document.getElementById('pump').classList.add('svg_drawing_animation');
+			}
+		});
+		
+	</script>
+
+</body>
+</html>
