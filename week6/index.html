@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="shortcut icon" type="image/png" href="favicon.png">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pangolin&display=swap" rel="stylesheet">
 </head>
 
 <body>
+	<center>
 	<div id="poem">
 		<p>
-			Either the Darkness alters - <br>
-			Or something in the sight<br>
-			Adjusts itself to Midnight<br>
-			And <span id="life">Life</span> steps almost straight. 
+			This is a poem <br>
+			I am trying to write <br>
+			It's not very good <br>
+			<span id="life"> Shuffle to see me try</span> 
 		</p>
 	</div>
 
@@ -26,15 +29,14 @@
   		var chosenWord = "";
 		var bgColor = "";
 
-  //using if statement, check if the randomNumber is larger than 0.5 or not.
-		if (randomNumber > 0.5){
+  		if (randomNumber > 0.5){
     // if randomNumber is larger than 0.5 assign "Life" to chosenWord and "pink" to bg color
-			chosenWord = "Life";
-			bgColor = "pink";
+			chosenWord = "Shuffle to see me cry";
+			bgColor = "lightblue";
   		}else{
     // if randomNumber is not larger than 0.5 assign "Death" to chosenWord and "darkgray" to bg color
-    		chosenWord = "Death";
-    		bgColor = "darkgray";
+    		chosenWord = "Shuffle to see me try";
+    		bgColor = "orange";
   		}
 
   //get the elements from html page which are needed to be changed
@@ -49,5 +51,6 @@
   	console.log(randomNumber);
 	}
 	</script>
+</center>
 </body>	
 </html>
