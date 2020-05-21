@@ -1,40 +1,53 @@
 .title{
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	font-family: 'Krona One', sans-serif;
+	top: 1%;
+	left: 1%;
+	font-family: 'Fugaz One', cursive;
 	font-size: 80px;
-	transition: -webkit-text-stroke-color 2s, color 2s;
+	color: black;
 }
-.title:hover{
-	color:transparent;
-	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: black;
-}
+
 .menu{
 	margin:24px;
 }
 .menu_list{
 	list-style-type: none;
+	position: absolute;
+	top: 1%;
+	right: 1%;
   	margin: 0;
   	padding: 0;
-  	font-family: 'Bad Script', cursive;
+  	font-family: 'Teko', sans-serif;
   	font-size: 80px;
 }
 .work_list{
 	list-style-type: none;
+	position: absolute;
+	top: 100%;
+	right: 1%;
   	margin: 0;
   	padding: 0;
-  	font-family: 'Bad Script', cursive;
+  	font-family: 'Teko', sans-serif;
   	font-size: 28px;
 }
 #menu_home:hover{
-	color:skyblue;
+	color:black;
 }
 #menu_about:hover{
-	color:skyblue;
+	color:black;
 }
 #menu_works:hover{
-	color:skyblue;
+	color:black;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover 
+{
+     color: black; 
+     text-decoration:none; 
+     cursor:pointer;  
 }
